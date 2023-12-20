@@ -22,8 +22,6 @@ describe('when user is not signed in', () => {
     {
       path: '/api/user',
       res: () => {
-        console.log('NOT LOGGED IN RESPONSE')
-
         return { user: null }
       }
     }
@@ -55,7 +53,6 @@ describe('when user is signed in', () => {
     {
       path: '/api/user',
       res: () => {
-        console.log('LOGGED IN RESPONSE')
         return { user: { id: 1, email: 'aoeu@a.com' } }
       }
     }
